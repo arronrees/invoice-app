@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import FilterForm from './FilterForm';
 
 export default function Filter() {
   const [filterActive, setFilterActive] = useState(false);
@@ -31,50 +32,7 @@ export default function Filter() {
           </svg>
         </span>
       </button>
-      <form
-        className={`absolute shadow-xs drop-shadow-xl p-6 pr-20 bg-white rounded-lg left-1/2 -translate-x-1/2 -bottom-40 transition duration-300 ${
-          filterActive
-            ? 'opacity-100 visible pointer-events-auto'
-            : 'opacity-0 invisible pointer-events-none'
-        }`}
-      >
-        <label
-          htmlFor='draft'
-          className=' flex items-center mb-2 cursor-pointer font-semibold'
-        >
-          <input
-            type='checkbox'
-            name='draft'
-            id='draft'
-            className='mr-2 appearance-none rounded-sm text-mid-purple p-2 bg-light-grey border-light-grey focus:ring-2 focus:ring-mid-purple'
-          />
-          Draft
-        </label>
-        <label
-          htmlFor='pending'
-          className='appearance-none flex items-center mb-2 cursor-pointer font-semibold'
-        >
-          <input
-            type='checkbox'
-            name='pending'
-            id='pending'
-            className='mr-2 appearance-none rounded-sm text-mid-purple p-2 bg-light-grey border-light-grey focus:ring-2 focus:ring-mid-purple'
-          />
-          Pending
-        </label>
-        <label
-          htmlFor='paid'
-          className='appearance-none flex items-center cursor-pointer font-semibold'
-        >
-          <input
-            type='checkbox'
-            name='paid'
-            id='paid'
-            className='mr-2 appearance-none rounded-sm text-mid-purple p-2 bg-light-grey border-light-grey focus:ring-2 focus:ring-mid-purple'
-          />
-          Paid
-        </label>
-      </form>
+      <FilterForm filterActive={filterActive} />
     </div>
   );
 }
