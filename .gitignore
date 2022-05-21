@@ -34,3 +34,7 @@ yarn-error.log*
 #
 /.yarn
 /.yarn/
+upload
+/upload
+upload.zip
+/upload.zip
