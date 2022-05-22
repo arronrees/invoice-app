@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function InvoiceItem() {
   return (
-    <article className='p-6 bg-white rounded-lg shadow-xs drop-shadow-md mb-6 last-of-type:mb-0 transition duration-300 border-2 border-white hover:border-mid-purple hover:drop-shadow-lg'>
+    <article className='mb-6 last-of-type:mb-0'>
       <Link href='/'>
-        <a>
+        <a className='block p-6 bg-white rounded-lg shadow-xs drop-shadow-md transition duration-300 border-2 border-white hover:border-mid-purple hover:drop-shadow-lg focus:ring-2 ring-mid-purple ring-offset-2 focus:outline-none'>
           <div className='mb-6 flex justify-between items-center'>
             <h3 className='font-bold text-sm'>#RT3080</h3>
             <p className='font-normal text-sm text-mid-grey'>Jensen Huang</p>
