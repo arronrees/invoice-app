@@ -5,7 +5,7 @@ import Chevron from '../icons/Chevron';
 export default function FilterPopup() {
   return (
     <Popover className='relative'>
-      <Popover.Button>
+      <Popover.Button className='flex items-center'>
         <span className='sm:pr-1'>Filter</span>
         <span className='hidden sm:block'>by status</span>
         <span className='ml-2'>
