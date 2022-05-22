@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function ProfileBtn() {
   return (
     <Link href='/'>
-      <a className='py-5 px-7 border-light-blue border-opacity-30 border-l-2'>
+      <a className='py-5 px-7 border-light-blue border-opacity-30 border-l-2 lg:border-l-0 lg:border-t-2'>
         <figure className='w-9 h-9 rounded-full'>
           <Image
             className='rounded-full'
