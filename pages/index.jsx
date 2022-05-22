@@ -1,8 +1,8 @@
 import Layout from '../components/layout/Layout';
 import Header from '../components/header/Header';
+import Wrapper from '../components/layout/Wrapper';
 import Headline from '../components/headline/Headline';
 import InvoiceGrid from '../components/invoices/InvoiceGrid';
-import Wrapper from '../components/layout/Wrapper';
 
 export default function Home() {
   return (

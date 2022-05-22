@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import Chevron from '../icons/Chevron';
 
 export default function InvoiceItem() {
   return (
     <article className='mb-6 last-of-type:mb-0'>
-      <Link href='/'>
+      <Link href='/view'>
         <a className='block p-6 bg-white rounded-lg shadow-xs drop-shadow-md transition duration-300 border-2 border-white hover:ring-2 hover:drop-shadow-lg focus:ring-2 ring-mid-purple ring-offset-2 focus:outline-none w-full md:flex md:justify-between md:items-center'>
           <div className='mb-6 flex justify-between items-center md:mb-0'>
             <h3 className='font-bold text-sm md:mr-8 md:text-lg'>#RT3080</h3>
@@ -25,17 +26,9 @@ export default function InvoiceItem() {
               <span className='bg-green w-2 h-2 rounded-full mr-4'></span>
               <span className='inline-block  font-bold'>Paid</span>
             </div>
-          </div>
-          <div className='hidden'>
-            <svg
-              width='7'
-              height='10'
-              viewBox='0 0 7 10'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path d='M1 1L5 5L1 9' stroke='#7C5DFA' strokeWidth='2' />
-            </svg>
+            <div className='hidden md:block md:ml-4 md:-rotate-90'>
+              <Chevron />
+            </div>
           </div>
         </a>
       </Link>

@@ -3,7 +3,7 @@ import Filter from '../headline/Filter';
 
 export default function Headline() {
   return (
-    <section className='px-6 py-8 flex items-center justify-between'>
+    <section className='py-8 flex items-center justify-between'>
       <div>
         <h1 className='font-bold text-xl sm:text-2xl md:text-3xl lg:text-5xl'>
           Invoices
