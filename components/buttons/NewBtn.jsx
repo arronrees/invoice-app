@@ -1,6 +1,6 @@
 export default function NewBtn() {
   return (
-    <button className='flex items-center text-sm font-bold bg-mid-purple text-white p-2 rounded-full transition duration-300 hover:bg-light-purple focus:ring-2 ring-mid-purple ring-offset-2 focus:outline-none'>
+    <button className='flex items-center font-bold bg-mid-purple text-white p-2 rounded-full transition duration-300 hover:bg-light-purple focus:ring-2 ring-mid-purple ring-offset-2 focus:outline-none lg:text-lg'>
       <span className='bg-white rounded-full p-2 flex items-center justify-center mr-2 w-8 h-8'>
         <svg
           width='11'

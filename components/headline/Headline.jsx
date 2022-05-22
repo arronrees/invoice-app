@@ -3,10 +3,14 @@ import Filter from '../headline/Filter';
 
 export default function Headline() {
   return (
-    <section className='px-6 py-8 flex items-center justify-between max-w-5xl mx-auto'>
+    <section className='px-6 py-8 flex items-center justify-between'>
       <div>
-        <h1 className='font-bold text-xl'>Invoices</h1>
-        <p className='font-medium text-xs text-mid-grey'>7 Invoices</p>
+        <h1 className='font-bold text-xl sm:text-2xl md:text-3xl lg:text-5xl'>
+          Invoices
+        </h1>
+        <p className='font-medium text-xs text-mid-grey md:text-base lg:text-xl'>
+          7 Invoices
+        </p>
       </div>
       <Filter />
       <NewBtn />
