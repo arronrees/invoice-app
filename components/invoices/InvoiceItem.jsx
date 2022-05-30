@@ -5,7 +5,7 @@ export default function InvoiceItem() {
   return (
     <article className='mb-6 last-of-type:mb-0'>
       <Link href='/view'>
-        <a className='block p-6 bg-white rounded-lg shadow-xs drop-shadow-md transition duration-300 border-2 border-white hover:ring-2 hover:drop-shadow-lg focus:ring-2 ring-mid-purple ring-offset-2 focus:outline-none w-full md:flex md:justify-between md:items-center'>
+        <a className='block p-4 bg-white rounded-lg shadow-xs drop-shadow-md transition duration-300 border-2 border-white hover:ring-2 hover:drop-shadow-lg focus:ring-2 ring-mid-purple ring-offset-2 focus:outline-none w-full xs:p-6 md:flex md:justify-between md:items-center'>
           <div className='mb-6 flex justify-between items-center md:mb-0'>
             <h3 className='font-bold text-sm md:mr-8 md:text-lg'>#RT3080</h3>
             <p className='font-normal text-sm text-mid-grey md:text-lg'>

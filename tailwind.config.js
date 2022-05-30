@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -27,6 +29,10 @@ module.exports = {
     },
     fontFamily: {
       sans: ['League Spartan', 'sans-serif'],
+    },
+    screens: {
+      xs: '400px',
+      ...defaultTheme.screens,
     },
     extend: {},
   },
