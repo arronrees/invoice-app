@@ -7,13 +7,11 @@ import InvoiceGrid from '../components/invoices/InvoiceGrid';
 export default function Home() {
   return (
     <Layout>
-      <div className='lg:flex'>
-        <Header />
-        <Wrapper>
-          <Headline />
-          <InvoiceGrid />
-        </Wrapper>
-      </div>
+      <Header />
+      <Wrapper>
+        <Headline />
+        <InvoiceGrid />
+      </Wrapper>
     </Layout>
   );
 }

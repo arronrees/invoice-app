@@ -26,6 +26,7 @@ module.exports = {
       orange: '#FF8F00',
       'light-orange': '#ff91000f',
       white: '#fff',
+      transparent: 'rgba(0,0,0,0)',
     },
     fontFamily: {
       sans: ['League Spartan', 'sans-serif'],

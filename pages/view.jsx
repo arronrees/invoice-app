@@ -1,7 +1,7 @@
 import Layout from '../components/layout/Layout';
 import Header from '../components/header/Header';
 import Wrapper from '../components/layout/Wrapper';
-import GoBack from '../components/view/GoBack';
+import GoBack from '../components/layout/GoBack';
 import Status from '../components/view/Status';
 import InvoiceDetail from '../components/view/InvoiceDetail';
 import InvoiceTop from '../components/view/InvoiceFrom';
@@ -12,19 +12,17 @@ import InvoiceBtns from '../components/view/InvoiceBtns';
 export default function Home() {
   return (
     <Layout>
-      <div className='lg:flex'>
-        <Header />
-        <Wrapper>
-          <GoBack />
-          <Status />
-          <InvoiceDetail>
-            <InvoiceTop />
-            <InvoiceMid />
-            <InvoiceNumbers />
-            <InvoiceBtns className='mt-6 flex items-center flex-col sm:flex-row lg:hidden' />
-          </InvoiceDetail>
-        </Wrapper>
-      </div>
+      <Header />
+      <Wrapper>
+        <GoBack href='/' />
+        <Status />
+        <InvoiceDetail>
+          <InvoiceTop />
+          <InvoiceMid />
+          <InvoiceNumbers />
+          <InvoiceBtns className='mt-6 flex items-center flex-col sm:flex-row lg:hidden' />
+        </InvoiceDetail>
+      </Wrapper>
     </Layout>
   );
 }
