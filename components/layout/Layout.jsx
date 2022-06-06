@@ -1,6 +1,8 @@
-export default function Layout({ children }) {
+export default function Layout({ children, className }) {
   return (
-    <div className='bg-light-bg tracking-wide text-black min-h-screen'>
+    <div
+      className={`bg-light-bg tracking-wide text-black min-h-screen ${className}`}
+    >
       {children}
     </div>
   );

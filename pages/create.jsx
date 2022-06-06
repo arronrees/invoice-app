@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Layout from '../components/layout/Layout';
 import Header from '../components/header/Header';
 import Wrapper from '../components/layout/Wrapper';
@@ -7,12 +8,14 @@ export default function Home() {
   return (
     <Layout>
       <Header />
-      <Wrapper className='bg-white'>
+      <Wrapper>
         <GoBack href='/' />
-        <div>
+        <div className='bg-white p-6 rounded-lg shadow-xs drop-shadow-md mb-6'>
           <h1 className='font-semibold text-3xl mb-6'>New Invoice</h1>
           <section className='mb-8'>
-            <h2 className='font-bold text-mid-purple mb-2'>Bill From</h2>
+            <h2 className='font-bold text-mid-purple mb-2 text-xl'>
+              Bill From
+            </h2>
             <div className='mb-4'>
               <label className='block' htmlFor='streetAddress'>
                 <span className='text-mid-grey inline-block pb-1'>
@@ -26,7 +29,7 @@ export default function Home() {
                 />
               </label>
             </div>
-            <div className='mb-4 grid grid-cols-2 gap-4'>
+            <div className='mb-4 grid grid-cols-2 gap-4 md:grid-cols-3'>
               <label className='block' htmlFor='city'>
                 <span className='text-mid-grey inline-block pb-1'>City</span>
                 <input
@@ -47,9 +50,10 @@ export default function Home() {
                   className='block w-full rounded-md border-light-grey bg-transparent font-bold'
                 />
               </label>
-            </div>
-            <div className='mb-4'>
-              <label className='block' htmlFor='country'>
+              <label
+                className='block mb-4 col-span-2 md:col-span-1'
+                htmlFor='country'
+              >
                 <span className='text-mid-grey inline-block pb-1'>Country</span>
                 <input
                   type='text'
@@ -61,7 +65,7 @@ export default function Home() {
             </div>
           </section>
           <section className='mb-8'>
-            <h2 className='font-bold text-mid-purple mb-2'>Bill To</h2>
+            <h2 className='font-bold text-mid-purple mb-2 text-xl'>Bill To</h2>
             <div className='mb-4'>
               <label className='block' htmlFor='name'>
                 <span className='text-mid-grey inline-block pb-1'>
@@ -101,7 +105,7 @@ export default function Home() {
                 />
               </label>
             </div>
-            <div className='mb-4 grid grid-cols-2 gap-4'>
+            <div className='mb-4 grid grid-cols-2 gap-4 md:grid-cols-3'>
               <label className='block' htmlFor='city'>
                 <span className='text-mid-grey inline-block pb-1'>City</span>
                 <input
@@ -122,9 +126,10 @@ export default function Home() {
                   className='block w-full rounded-md border-light-grey bg-transparent font-bold'
                 />
               </label>
-            </div>
-            <div className='mb-4'>
-              <label className='block' htmlFor='country'>
+              <label
+                className='block mb-4 col-span-2 md:col-span-1'
+                htmlFor='country'
+              >
                 <span className='text-mid-grey inline-block pb-1'>Country</span>
                 <input
                   type='text'
@@ -148,12 +153,14 @@ export default function Home() {
               </label>
             </div>
             <div className='mb-4'>
-              <label className='block' htmlFor='country'>
-                <span className='text-mid-grey inline-block pb-1'>Country</span>
+              <label className='block' htmlFor='paymentTerms'>
+                <span className='text-mid-grey inline-block pb-1'>
+                  Payment Terms
+                </span>
                 <select
                   type='text'
-                  name='country'
-                  id='country'
+                  name='paymentTerms'
+                  id='paymentTerms'
                   className='block w-full rounded-md border-light-grey bg-transparent font-bold'
                 >
                   <option value='30'>30 Days</option>
@@ -162,9 +169,24 @@ export default function Home() {
                 </select>
               </label>
             </div>
+            <div className='mb-4'>
+              <label className='block' htmlFor='description'>
+                <span className='text-mid-grey inline-block pb-1'>
+                  Invoice Description
+                </span>
+                <input
+                  type='text'
+                  name='description'
+                  id='description'
+                  className='block w-full rounded-md border-light-grey bg-transparent font-bold'
+                />
+              </label>
+            </div>
           </section>
           <section className='mb-8'>
-            <h2 className='font-bold text-mid-purple mb-2'>Item List</h2>
+            <h2 className='font-bold text-mid-purple mb-2 text-xl'>
+              Item List
+            </h2>
             <div className='mb-4'>
               <label className='block' htmlFor='itemName'>
                 <span className='text-mid-grey inline-block pb-1'>
@@ -212,6 +234,37 @@ export default function Home() {
                   </svg>
                 </button>
               </div>
+            </div>
+            <div className='mb-4'>
+              <button
+                type='button'
+                className='w-full flex items-center justify-center text-center font-bold bg-x-light-grey text-light-blue px-8 py-4 rounded-full transition duration-300 hover:bg-light-grey focus:ring-2 ring-bg-light-grey ring-offset-2 focus:outline-none'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='16'
+                  height='16'
+                  fill='currentColor'
+                  viewBox='0 0 16 16'
+                  className='h-6 w-6 mr-2'
+                >
+                  <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z' />
+                </svg>
+                <span>Add New Item</span>
+              </button>
+            </div>
+            <div className='mt-6 flex items-center flex-col sm:flex-row lg:hidden'>
+              <Link href='/'>
+                <a className='inline-block text-center font-bold bg-x-light-grey text-light-blue px-8 py-6 rounded-full transition duration-300 hover:bg-light-grey focus:ring-2 ring-bg-light-grey ring-offset-2 focus:outline-none mb-4 lg:text-lg sm:mb-0 sm:mr-auto'>
+                  Discard
+                </a>
+              </Link>
+              <button className='inline-block text-center font-bold bg-dark-grey text-white px-8 py-6 rounded-full transition duration-300 hover:bg-dark-blue focus:ring-2 ring-dark-grey ring-offset-2 focus:outline-none mb-4 lg:text-lg sm:mb-0 sm:mr-4'>
+                Save as Draft
+              </button>
+              <button className='inline-block text-center font-bold bg-mid-purple text-white px-8 py-6 rounded-full transition duration-300 hover:bg-light-purple focus:ring-2 ring-mid-purple ring-offset-2 focus:outline-none lg:text-lg'>
+                Save & Send
+              </button>
             </div>
           </section>
         </div>
